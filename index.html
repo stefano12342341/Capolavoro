@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volontariato col Caffè</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        .main-image {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            flex: 1 1 200px;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #testo {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #495057;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Volontariato col Caffè</h1>
+        <img src="406.png&rs=_tccTw2MgxYfdxRYmYOB6Pk9jQH5POS_quVc8aOi3ns2htM1BhF_r5nAtRVDWvfTyMAZSK1CdbWaDHnglQjglAuFwI5cB_Vmg_uX4At01ifvHVhzR520_Yme+qShUDP+9Qj7hNmcQs3PUZ+9YD5vdA==" alt="Volontariato" class="main-image">
+        <div class="buttons">
+            <button class="button" type="button" onclick="mostraTesto('cosaAbbiamoFatto')">Che cosa abbiamo fatto</button>
+            <button class="button" type="button" onclick="mostraTesto('cosaHoProvato')">Il mio punto di vista</button>
+            <button class="button" type="button" onclick="mostraTesto('comeAiutare')">Come tutti possiamo aiutare</button>
+            <button class="button" type="button" onclick="mostraTesto('comunitaSantEgidio')">Comunità di Sant'Egidio</button>
+        </div>
+        <div id="testo">
+            <!-- Il testo verrà mostrato qui -->
+        </div>
+    </div>
+
+    <script>
+        function mostraTesto(action) {
+            var testoDiv = document.getElementById('testo');
+            if (action === 'cosaAbbiamoFatto') {
+                testoDiv.innerHTML = '<p>Durante quest\'anno, la nostra scuola ha offerto numerose opportunità ed eventi per avvicinare noi studenti al mondo del volontariato. Alcune attività si sono svolte all\'interno della scuola, mentre altre ci hanno portato a lavorare sul campo. I professori hanno svolto un ruolo cruciale come intermediari, facilitando il nostro coinvolgimento e supportandoci in ogni fase. Con il loro aiuto, siamo riusciti a comprendere meglio l\'importanza del volontariato e l\'impatto positivo che può avere sulla comunità.</p>';
+            } else if (action === 'cosaHoProvato') {
+                testoDiv.innerHTML = '<p>Io, in primis, ho deciso di mettermi in gioco e provare questa esperienza che mi ha sempre affascinato. Con l\'aiuto dei professori, ho avuto l\'opportunità di partecipare ad una mensa di beneficenza. Insieme ad alcuni compagni, abbiamo aiutato a preparare le pietanze, dato una mano in cucina a lavare i piatti, ma soprattutto, la parte che mi è rimasta più impressa è stata il comunicare e ascoltare le storie, le esperienze e i racconti dei bisognosi. Questo contatto umano mi ha permesso di vedere il mondo da una prospettiva diversa e di apprezzare ancor di più il valore della solidarietà e dell\'empatia.</p>';
+            } else if (action === 'comeAiutare') {
+                testoDiv.innerHTML = '<p>Ognuno di noi ha diverse possibilità e opportunità per aiutare il prossimo. Esistono numerose aziende che permettono, con piccole donazioni mensili, di sostenere persone bisognose. Allo stesso modo, molte altre organizzazioni offrono la possibilità di partecipare ad eventi più vicini a quanto precedentemente raccontato, permettendo a chiunque di fare del bene direttamente partecipando attivamente alla beneficenza. Questo è un gesto apparentemente semplice ma di grande importanza, in grado di fornire un sostegno significativo a coloro che ne hanno bisogno. Incoraggio caldamente tutti a considerare questa opportunità. Partecipare attivamente alla beneficenza non solo offre un aiuto tangibile alla comunità, ma porta anche a una maggiore consapevolezza delle sfide che molti affrontano quotidianamente. È un\'esperienza formativa che va al di là della semplice donazione. Attraverso il coinvolgimento diretto, si ha l\'opportunità di imparare e crescere, sviluppando un senso più profondo di empatia e solidarietà. In un mondo in cui le difficoltà possono essere molte e spesso nascoste, questa forma di volontariato offre una preziosa occasione per connettersi con la realtà di chi è meno fortunato. Consiglio vivamente questa esperienza a chiunque. È un modo concreto per fare la differenza nel mondo e, allo stesso tempo, per imparare preziose lezioni di vita che difficilmente si possono apprendere altrove.</p>';
+            } else if (action === 'comunitaSantEgidio') {
+                testoDiv.innerHTML = '<p>La Comunità di Sant\'Egidio è un movimento cristiano che si dedica al servizio dei poveri e alla promozione della pace. Fondata nel 1968, questa organizzazione opera in oltre 70 paesi e offre sostegno a senzatetto, rifugiati, anziani, e persone in difficoltà. Partecipare alle attività della Comunità di Sant\'Egidio è un modo significativo per contribuire al benessere della società e costruire una cultura di solidarietà e accoglienza.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
